@@ -20,6 +20,9 @@ const Header = () => {
           <li className="mx-2">
             <Link to="/about">About</Link>
           </li>
+          <li className="mx-2">
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
       </div>
       <IoMdList
@@ -34,6 +37,9 @@ const Header = () => {
             </li>
             <li className="py-2 px-4">
               <Link to="/about">About</Link>
+            </li>
+            <li className="py-2 px-4">
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "./Button";
-import { useReducerContext } from "../context/Context";
-import Header from "./Header";
-import Footer from "./Footer";
+import { useReducerContext } from "../../context/Context";
+import Header from "../common/Header";
+import Footer from "../common/Footer";
 
 const Home = () => {
   const { state, dispatch } = useReducerContext();
@@ -26,38 +26,38 @@ const Home = () => {
           ></textarea>
           <div className="flex flex-wrap gap-4 justify-around items-center mb-6">
             <Button
-              className="bg-blue-600"
+              className="bg-blue-600 cursor-pointer p-2 rounded"
               title="Convert Uppercase"
               onClick={() => dispatch({ type: "upper" })}
               text={state.text}
             />
             <Button
-              className="bg-blue-600"
+              className="bg-blue-600 cursor-pointer p-2 rounded"
               title="Convert Lowercase"
               onClick={() => dispatch({ type: "lower" })}
               text={state.text}
             />
             <Button
-              className="bg-blue-600"
-              title=" Remove Extra Spaces"
-              onClick={() => dispatch({ type: "extraSpace" })}
+              className="bg-red-400 cursor-pointer p-2 rounded"
+              title="Clear Text"
+              onClick={() => dispatch({ type: "clear" })}
               text={state.text}
             />
             <Button
-              className="bg-green-600"
+              className="bg-green-600 cursor-pointer p-2 rounded"
               title="Copy To Clipboard"
               onClick={() => dispatch({ type: "copy" })}
               text={state.text}
             />
             <Button
-              className="bg-red-400"
-              title="Clear Text"
-              onClick={() => dispatch({ type: "clear" })}
+              className="bg-blue-600 cursor-pointer p-2 rounded"
+              title=" Remove Extra Spaces"
+              onClick={() => dispatch({ type: "extraSpace" })}
               text={state.text}
             />
           </div>
-          <div>
-            <h2>Summary Of Your Text</h2>
+          <div className="flex flex-col gap-4">
+            <h2 className="text-2xl">Summary Of Your Text</h2>
             <p>
               Number of words:
               {state.text.split(/\s+/).filter((word) => word !== "").length}
@@ -71,11 +71,10 @@ const Home = () => {
                   return element.length !== 0;
                 }).length
               ).toFixed(3)}{" "}
-              Minutes
             </p>
           </div>
           <div>
-            <h2 className="mb-4">Preview Document</h2>
+            <h2 className="mb-4 text-xl text-center">Preview Document</h2>
             <textarea
               className="h-40 w-full bg-gray-300 outline-none border-none cursor-not-allowed"
               value={state.text}

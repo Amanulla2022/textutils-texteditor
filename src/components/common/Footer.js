@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className=" flex justify-center flex-col items-center text-white font-semibold py-4 my-4 bg-black">
       Copyright@2024 | All Rights Reserved | by Amanulla Iqbal Mulla
-      <div className="flex ">
+      <div className="flex gap-4 mt-4">
         <a
           href="https://github.com/Amanulla2022"
           target="_blank"
