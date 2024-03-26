@@ -5,9 +5,11 @@ import {
   IoIosArrowDropdownCircle,
   IoIosArrowDropupCircle,
 } from "react-icons/io";
+import { useReducerContext } from "../../context/Context";
 
 const About = () => {
   const [showDesc, setShowDesc] = useState(0);
+  const { state, dispatch } = useReducerContext();
   const aboutData = [
     {
       title: "Analyse Your text",
@@ -24,14 +26,18 @@ const About = () => {
   ];
 
   const toggleDesc = (index) => {
-    setShowDesc(showDesc === index ? -1 : index); // Toggle description visibility
+    setShowDesc(showDesc === index ? -1 : index);
   };
   return (
-    <div>
+    <div
+      className={`flex justify-between h-screen flex-col p-4 ${
+        state.theme ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       <Header />
       <main className="flex flex-col justify-center items-center">
         <h1 className="text-3xl font-semibold">About App</h1>
-        <div className="flex md:flex-col">
+        <div className="flex flex-col md:m-36">
           {aboutData.map((details, index) => {
             return (
               <div className="border m-4 ">

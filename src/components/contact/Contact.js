@@ -1,10 +1,16 @@
 import React from "react";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
+import { useReducerContext } from "../../context/Context";
 
 const Contact = () => {
+  const { state, dispatch } = useReducerContext();
   return (
-    <div>
+    <div
+      className={`flex justify-between flex-col h-screen p-4 ${
+        state.theme ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       <Header />
       <main className="m-36 border flex flex-col justify-center items-center">
         <h1 className="text-3xl mb-2">Contact Me</h1>

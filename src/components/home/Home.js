@@ -8,13 +8,24 @@ const Home = () => {
   const { state, dispatch } = useReducerContext();
 
   return (
-    <>
+    <div
+      className={`flex justify-between flex-col p-4 ${
+        state.theme ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       <Header />
       <main className="w-full h-full py-12 px-4 flex justify-center">
         <div className="w-full max-w-2xl flex flex-col text-primary-text">
           <h1 className="text-center mb-8 text-2xl md:text-3xl">
-            TextUtils - Word Counter, Character Counter, Remove Extra Space
+            TextUtils - Word Counter, Character Counter, Remove Extra Space,
           </h1>
+          <a
+            href=" https://www.linkedin.com/in/amanulla-mulla-000678232/"
+            target="_blank"
+            className="text-center cursor-pointer text-xl underline mb-8 text-purple-500"
+          >
+            Created by Amanulla
+          </a>
           <h2 className="mb-4">Enter Text Here :</h2>
           <textarea
             placeholder="Enter Text Here..."
@@ -84,7 +95,7 @@ const Home = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 export default Home;
