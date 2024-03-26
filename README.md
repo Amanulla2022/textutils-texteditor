@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# TextUtils/TextEditor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TextUtils/TextEditor is a web application built with React that provides various text utility functions such as word counter, character counter, and removing extra spaces. It also supports a light and dark theme for better readability.
 
-## Available Scripts
+# [Hosted Link](https://textutils-texteditor.vercel.app/)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Word Counter: Count the number of words in your text.
+- Character Counter: Calculate the number of characters in your text.
+- Remove Extra Spaces: Trim extra spaces from the text.
+- Theme Switcher: Toggle between light and dark themes for better viewing experience.
+- Responsive Design: The app is designed to work well on both desktop and mobile devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React: JavaScript library for building user interfaces.
+- React Router: Library for handling routing in React applications.
+- Tailwind CSS: Utility-first CSS framework used for styling.
+- Context API: Used for state management and theme handling.
+- Clipboard API: Allows copying text to the clipboard for the "Copy" functionality.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   - Enter text in the textarea provided.
+   - Use the buttons to perform various text utility functions such as converting to uppercase/lowercase, clearing text, copying to clipboard, and removing extra spaces.
+   - The summary section displays the number of words, characters, and estimated reading time for the entered text.
+   - The preview section shows the formatted text based on the applied utility functions.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
